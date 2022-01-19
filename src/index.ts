@@ -106,7 +106,7 @@ import utils from './utils';
         writeToXLSX('Key', utils.getFileName(JSONFile).toUpperCase());
 
         const parseAndWrite = (parentKey: string | null, targetObject: any) => {
-          const keys = Object.keys(targetObject);
+          const keys = Object.keys(targetObject).sort();
 
           for (const key of keys as string[]) {
             const element: any = targetObject[key];
